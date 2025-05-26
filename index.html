@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>National Attorney's Office of Hack Club</title>
+</head>
+<body>
+<div id="insertTOP"></div>
+<div class="body">
+    <br><h1 class="montserrat">HCNAO</h1>
+    <h2>Hack Club National Attorney's Office</h2>
+    <p><span>In Orpheo Confidimus</span></p><br>
+
+    <h3 style="color: #660c32; font-size: 25px">
+        Established by the Public Defenders Act, The Hack Club National Attorney's Office
+        represents the Government of Hack Club 
+        and serves the nation of Hack Club.</h3>
+    </a>
+    <br>
+</div>
+<div class="body-red">
+    <br><h1 style="color: white">RECENT CASES AND LAWSUITS</h1>
+    <div id="recentCases">
+        <h3>None</h3>
+    </div>
+</div>
+
+
+<div class="body"><br><br><p style="color: #e1eaf6">The Hack Club National Attorney's Office (HCNAO) and other associated communities and entities are not associated with the Hack Club non-profit organization. This is an unofficial community group and only exists for the purpose of entertainment.</p></div>
+
+</body>
+<script src="main.js"></script>
+<script>
+    function about() {
+        window.location.href = "about.html";
+    }
+    fetch("https://raw.githubusercontent.com/hcgov/API/refs/heads/main/courts.json")
+    .then(function(response) {
+        return response.json();
+    })
+    .then (function(data) {
+        let count = 0;
+        let inner = ``;
+        for (let i = 0; i < data.length; i++) {
+            if (count >= 3) {
+                break;
+            }
+            if (data[i].status === "Verdict" && data[i].name.includes("Hack Club Government")) {
+                count++;
+                inner += `<h4><span>${data[i].name}</span></h4>`;
+            }
+        }
+        document.getElementById("recentCases").innerHTML = inner;
+        //console.log(inner);
+        if (inner.includes("<h4>") != true) {
+            document.getElementById("recentCases").innerHTML = "<h3>-None Currently-</h3><br>"
+        }
+    })
+</script>
+</html>
