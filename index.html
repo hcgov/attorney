@@ -21,7 +21,7 @@
     <br>
 </div>
 <div class="body-red">
-    <br><h1 style="color: white">RECENT CASES AND LAWSUITS</h1>
+    <br><h1 style="color: white; padding: 10px">RECENT CASES AND LAWSUITS</h1>
     <div id="recentCases">
         <h3>None</h3>
     </div>
@@ -52,7 +52,7 @@
                 inner += `<h4><span>${data[i].name}</span></h4>`;
             }
         }
-        document.getElementById("recentCases").innerHTML = inner;
+        document.getElementById("recentCases").innerHTML = inner + "<br>";
         //console.log(inner);
         if (inner.includes("<h4>") != true) {
             document.getElementById("recentCases").innerHTML = "<h3>-None Currently-</h3><br>"
