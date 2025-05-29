@@ -36,7 +36,7 @@
     function about() {
         window.location.href = "about.html";
     }
-    fetch("https://raw.githubusercontent.com/hcgov/API/refs/heads/main/courts.json")
+    fetch("https://raw.githubusercontent.com/hcgov/data/refs/heads/main/courts.json")
     .then(function(response) {
         return response.json();
     })
