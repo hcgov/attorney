@@ -2,6 +2,7 @@ document.getElementById("insertTOP").innerHTML = `
 <div id="disclaimer"></div>
 <div id="header"></div>
 <div id="navbar"></div>
+<div id="pride"></div>
 `
 document.getElementById("navbar").innerHTML = `
 <div id="header-links">
@@ -26,5 +27,8 @@ document.getElementById("logo").onclick = function() {
 }
 document.getElementById("disclaimer").innerHTML = `
     <h3>The Hack Club National Attorney's Office and other associated entities are not associated with the Hack Club non-profit organization
+`;
+document.getElementById("pride").innerHTML = `
+    <h3><span>CELEBRATING PRIDE</span></h3>
 `
                 
