@@ -47,7 +47,7 @@
             if (count >= 3) {
                 break;
             }
-            if (data[i].status === "Verdict" && ( data[i].name.includes("Hack Club Government") || data[i].name.includes("United Republic"))) {
+            if (data[i].status === "Verdict" &&(data[i].name.includes("Hack Club Government") || data[i].name.includes("United Republic"))) {
                 count++;
                 inner += `<h4><span>${data[i].name}</span></h4>`;
             }
