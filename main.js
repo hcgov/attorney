@@ -20,7 +20,7 @@ To be added into the navbar
 */
 document.getElementById("header").innerHTML = `
 <!--<img src="parliament-full.svg" id="logo">-->
-<img src="HCNAO.png" id="logo">
+<img src="nao.svg" id="logo" style="height: 85px">
 `
 document.getElementById("logo").onclick = function() {
     window.location.href="index.html";
